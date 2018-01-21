@@ -1,0 +1,7 @@
+-------------------------------------------------------------------------------
+Test set: com.reservations.test.rest.FacilityEndpointTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.012 sec <<< FAILURE! - in com.reservations.test.rest.FacilityEndpointTest
+initializationError(com.reservations.test.rest.FacilityEndpointTest)  Time elapsed: 0.009 sec  <<< ERROR!
+java.lang.Exception: No runnable methods
+

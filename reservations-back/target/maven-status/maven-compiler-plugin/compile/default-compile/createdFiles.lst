@@ -1,0 +1,10 @@
+com\reservations\back\models\Facility.class
+com\reservations\back\repositories\FacilityRepository.class
+com\reservations\back\repositories\ReservationRepository.class
+com\reservations\back\models\Reservation.class
+com\reservations\back\repositories\DBUtil$1.class
+com\reservations\back\rest\JAXRSConfiguration.class
+com\reservations\back\rest\ReservationEndpoint.class
+com\reservations\back\repositories\DBUtil.class
+com\reservations\back\models\DBType.class
+com\reservations\back\rest\IFacilityEndpoint.class

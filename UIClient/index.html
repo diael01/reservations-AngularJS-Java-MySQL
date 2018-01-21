@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html>
+<html ng-app="Reservations">
+<head>
+    <meta name="viewport" http-equiv="X-UA-Compatible" content="IE-9, width=device-width,initial-scale=1,maximum-scale=1, user-scalable=no" />
+    <title>Reservations</title>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link href="content/font-awesome.min.css" rel="stylesheet" />
+    <link href="content/bootstrap.min.css" rel="stylesheet" />
+    <link href="app/app.css" rel="stylesheet" />
+    <link href="app/menuframework/menu/menu.css" rel="stylesheet" />
+    <link href="app/menuframework/orchestrator/framework.css" rel="stylesheet" />
+
+    <script src="scripts/jquery-1.9.1.js"></script>
+    <script src="scripts/angular.js"></script>
+    <script src="scripts/angular-route.js"></script>
+    <script src="scripts/angular-resource.js"></script>
+    <script src="scripts/angular-local-storage.js"></script>
+    <script src="scripts/angular-ui-router.js"></script>
+    <!--<script src="scripts/aes.js"></script>-->
+
+    <script src="app/app.js"></script>
+    <script src="app/services/authenticationInterceptorService.js"></script>
+    <script src="app/services/authenticationService.js"></script>
+    <script src="app/menuframework/menu/menuController.js"></script>
+    <script src="app/menuframework/menu/menuDirective.js"></script>
+    <script src="app/menuframework/menu/menuGroupDirective.js"></script>
+    <script src="app/menuframework/menu/menuItemDirective.js"></script>
+
+    <script src="app/menuframework/orchestrator/frameworkController.js"></script>
+    <script src="app/menuframework/orchestrator/frameworkDirective.js"></script>
+
+    <script src="app/controllers/reservationsController.js"></script>
+    <script src="app/directives/reservationsDirective.js"></script>
+    <script src="app/services/reservationsService.js"></script>
+    <script src="app/controllers/facilitiesController.js"></script>
+    <script src="app/directives/facilitiesDirective.js"></script>
+    <script src="app/services/facilitiesService.js"></script>
+
+    <script src="app/directives/editReservationDirective.js"></script>
+    <script src="app/controllers/editReservationController.js"></script>
+
+</head>
+<body class="container-fluid">
+    <div class="title-bar">
+        <div class="row">
+
+            <div class="logo-area col-sm-6">
+                <img class="icon" ng-src="content/images/employee.png" />
+                <div class="title-area">
+                    <p class="logo-title">Event Reservations</p>
+                    <p class="logo-subtitle">Development</p>
+                </div>
+                <div ng-if="isMenuButtonVisible" ng-click="menuButtonClicked()"
+                     class="collapsed-menu pull-right">
+                    <button type="button" class="btn nav-button">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="right-side-controls col-sm-6">
+                 <div data-ng-hide="!authentication.isAuthenticated">
+                     <b class="right-side-controls">Logged-In User: </b>
+                     {{authentication.userName}}
+                 </div>
+            </div>
+        </div>
+    </div>
+
+    <div ng-show="authentication.isAuthenticated">
+        <framework>
+            <menu>                
+                <menu-group id="MenuGroup1" data-ng-show="isAuthorized['reservations']" label="Listings" icon="fa-flag-checkered">
+                   
+                    <menu-item id="Item2" data-ng-show="isAuthorized['reservations']" label="Facilities" icon="fa-search" route="facilities"></menu-item>
+                    <menu-item id="Item1" data-ng-show="isAuthorized['reservations']" label="Events" icon="fa-search" route="events"></menu-item>
+                    <menu-item id="Item1" data-ng-show="isAuthorized['reservations']" label="Direct Reserve" icon="fa-search" route="reservations"></menu-item>
+                </menu-group>
+                <menu-group id="MenuGroup2" data-ng-show="isAuthorized['reservations']" label="Group" icon="fa-flag-checkered">
+                    <menu-item id="Item1" data-ng-show="isAuthorized['reservations']" label="Alerts" icon="fa-search"></menu-item>
+                    <menu-item id="Item2" data-ng-show="isAuthorized['reservations']" label="Forum" icon="fa-search"></menu-item>
+                    <menu-item id="Item2" data-ng-show="isAuthorized['reservations']" label="Blog" icon="fa-search"></menu-item>
+                </menu-group>
+                <menu-group id="MenuGroup3" data-ng-show="isAuthorized['reservations']" label="Admin" icon="fa-flag-checkered">
+                    <menu-item id="Item1" data-ng-show="isAuthorized['reservations']" label="Manage Facility" icon="fa-search"></menu-item>
+                    <menu-item id="Item2" data-ng-show="isAuthorized['reservations']" label="Manage Users" icon="fa-search"></menu-item>
+                    <menu-item id="Item2" data-ng-show="isAuthorized['reservations']" label="Manage Roles" icon="fa-search"></menu-item>
+                    <menu-item id="Item2" data-ng-show="isAuthorized['reservations']" label="Manage MenuItems" icon="fa-search"></menu-item>
+                </menu-group>
+                <menu-item data-ng-show="isAuthorized['logout']" label="Logout" icon="fa-sign-out"></menu-item>
+            </menu>
+        </framework>
+
+    </div>
+</body>
+</html>

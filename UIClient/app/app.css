@@ -1,0 +1,22 @@
+﻿
+body {
+    background-color: #d4d1d1;
+    font-family: "Open Sans", Arial, sans-serif;
+}
+
+.container-fluid {
+    padding: 0;
+}
+
+.big-font {
+    font-size: 40px;
+    padding: 40px;
+}
+
+.red-cell {
+    color: red;
+}
+
+.blue-cell {
+    color: blue;
+}

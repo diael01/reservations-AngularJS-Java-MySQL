@@ -1,0 +1,16 @@
+﻿
+
+<div class="menu-area"
+     ng-show="isMenuVisible"
+     ng-class="{'menu-area-vertical': isMenuVertical, 'menu-area-horizontal': !isMenuVertical}">
+    <user-profile></user-profile>
+    <ng-transclude></ng-transclude>
+</div>
+
+<div ng-view class="view"
+        ng-class="{'view-full-width': !isMenuVertical || !isMenuVisible}">
+</div>
+
+
+
+

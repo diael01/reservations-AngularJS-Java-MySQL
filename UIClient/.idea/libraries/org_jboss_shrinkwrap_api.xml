@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="org.jboss.shrinkwrap.api">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/../reservations-back/lib" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+    <jarDirectory url="file://$PROJECT_DIR$/../reservations-back/lib" recursive="false" />
+  </library>
+</component>

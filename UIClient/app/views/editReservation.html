@@ -1,0 +1,133 @@
+﻿<div ng-controller="editReservationController">
+    
+    <form class="form-horizontal">
+        <div class="form-group">
+            <div class="col-sm-2">
+                <button type="button" class="btn btn-default" ng-click="cancelReservation()">Cancel Reservation</button>
+            </div>
+            <div class="col-sm-2">
+                <button type="button" class="btn btn-default" ng-click="save">Save Changes</button>
+            </div>
+        </div>
+    </form>
+    <form class="form-horizontal">
+        <div class="form-group">
+                <div class="col-sm-2">
+                    <label for="playersNo">Players Number:</label>
+                </div>
+                <div class="col-sm-6">
+                    <input type="text" class="form-control" id="playersNo" placeholder="Enter Players No" ng-model="reservation.playersNo">
+                </div>
+            </div>
+    </form>   
+
+    <form class="form-horizontal">
+        <div class="form-group">
+            <div class="col-sm-2">
+                <label for="comments">Comments::</label>
+            </div>
+            <div class="col-sm-6">
+                <input type="text" class="form-control" id="comments" placeholder="Enter Comments" ng-model="reservation.comments">
+            </div>         
+        </div>
+    </form>
+
+    <form class="form-horizontal">
+        <div class="form-group">
+            <div class="col-sm-2">
+                <label for="startTime">Start Time:</label>
+            </div>
+            <div class="col-sm-6">
+                <input type="text" class="form-control" id="startTime" placeholder="Enter Start Time" ng-model="reservation.startTime">
+            </div>
+        </div>
+    </form>
+
+    <form class="form-horizontal">
+        <div class="form-group">
+            <div class="col-sm-2">
+                <label for="endTime">End Time:</label>
+            </div>
+            <div class="col-sm-6">
+                <input type="text" class="form-control" id="endTime" placeholder="Enter End Time" ng-model="reservation.endTime">
+            </div>
+        </div>
+    </form>
+
+    <form class="form-horizontal">
+        <div class="form-group">
+            <div class="col-sm-2">
+                <label for="court">Court:</label>
+            </div>
+            <div class="col-sm-6">
+                
+                <input type="number" class="form-control" id="court" placeholder="Enter Court Id" ng-model="reservation.courtId"/>
+            </div>
+        </div>
+    </form>
+
+    <form class="form-horizontal">
+        <div class="form-group">
+            <div class="col-sm-2">
+                <label for="slot">Slot:</label>
+            </div>
+            <div class="col-sm-6">
+                <input type="number" class="form-control" id="slot" placeholder="Enter Slot No" ng-model="reservation.slotNo">
+            </div>
+        </div>
+    </form>
+
+    <form class="form-horizontal">
+        <div class="form-group">
+            <div class="col-sm-2">
+                <label for="price">Price Combo:</label>
+            </div>
+            <div class="col-sm-6">
+                <input type="number" class="form-control" id="price" placeholder="Choose Price" ng-model="reservation.priceId">
+            </div>
+        </div>
+    </form>
+
+    <form class="form-horizontal">
+        <div class="form-group">
+            <div class="col-sm-2">
+                <label for="facility">Facility Name:</label>
+            </div>
+            <div class="col-sm-6">
+                <input type="number" class="form-control" id="facility" placeholder="Choose Facility" ng-model="reservation.facilityId">
+            </div>
+        </div>
+    </form>
+
+    <form class="form-horizontal">
+        <div class="form-group">
+            <div class="col-sm-2">
+                <label for="status">Status Name:</label>
+            </div>
+            <div class="col-sm-6">
+                <input type="text" class="form-control" id="status" placeholder="Enter Status" ng-model="reservation.statusId">
+            </div>
+        </div>
+    </form>
+
+    <form class="form-horizontal">
+        <div class="form-group">
+            <div class="col-sm-2">
+                <label for="players">Players:</label>
+            </div>
+            <div class="col-sm-6">
+                <input type="number" class="form-control" id="players" placeholder="Enter Players" ng-model="reservation.players">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-2">
+                <label for="Id">Reservation Id:</label>
+            </div>
+            <div class="col-sm-6">
+                <label id="Id" ng-model="reservation.players">{{reservation.id}}</label>
+            </div>
+        </div>
+    </form>
+
+
+</div>

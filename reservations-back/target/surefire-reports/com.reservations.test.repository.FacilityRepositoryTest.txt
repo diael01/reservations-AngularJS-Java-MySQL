@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.reservations.test.repository.FacilityRepositoryTest
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 15.829 sec - in com.reservations.test.repository.FacilityRepositoryTest

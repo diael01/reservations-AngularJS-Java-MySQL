@@ -1,0 +1,43 @@
+﻿
+    <div ng-controller="reservationsController">
+                      
+        <p>Facility:{{facility.name}}</p>
+        <br />
+        <div class="table-responsive">
+            <table id="tbl" class="table">
+                <thead>
+                    <tr>
+                        <th>Time:</th>
+                        <th>5-6</th>
+                        <th>6-7</th>
+                        <th>7-8</th>
+                        <th>8-9</th>
+                        <th>9-10</th>
+                        <th>10-11</th>
+                        <th>11-12</th>
+                        <th>12-13</th>
+                        <th>13-14</th>
+                        <th>14-15</th>
+                        <th>15-16</th>
+                        <th>16-17</th>
+                        <th>17-18</th>
+                        <th>18-19</th>
+                        <th>19-20</th>
+                        <th>20-21</th>
+                        <th>21-22</th>
+                    </tr>
+                </thead>
+                <tbody ng-repeat = "court in range(0, courts-1)">
+                    <tr>
+                        <td ng-repeat="slot in range(0, time_array.length-1)">
+                            <a href="" ng-if="$index===0">Court {{court + 1}}:</a>                          
+                            <a ng-class="{'red-cell': actions[court][slot]==='Edit/Cancel','blue-cell': !actions[court][slot]==='Reserve'}"
+                               href="Reserve" ng-if="$index!==0" ng-click="createReservation(slot, court)">{{actions[court][slot]}}</a>                          
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+
+    </div>

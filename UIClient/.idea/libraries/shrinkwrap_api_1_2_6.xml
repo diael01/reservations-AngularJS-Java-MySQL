@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="shrinkwrap-api-1.2.6">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../reservations-back/lib/shrinkwrap-api-1.2.6.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,50 @@
+﻿<div ng-controller="facilitiesController" >    
+    <form class="form-horizontal">
+        <div class="form-group">               
+            <div class="col-sm-6">
+                <input type="text" class="form-control" id="facilInput" placeholder="Enter Text Token" ng-model="token">
+            </div>
+            <button type="button" class="btn btn-default" ng-click="searchFacility(token)">Search</button>
+        </div>
+    </form>
+   
+    <div class="table-responsive">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Address</th>
+                    <th>Zipcode</th>
+                    <th>City</th>
+                    <th>Courts</th>
+                    <th>Lights</th>
+                    <th>Court Types</th>
+                    <th>Description</th>
+                    <th>Phone</th>
+                    <th>Reserve</th>
+                    <th>Map</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="facility in facilities track by $index">
+                    <td>{{facility.name}}</td>
+                    <td>{{facility.address}}</td>
+                    <td>{{facility.zipcode}}</td>
+                    <td>{{facility.city}}</td>
+                    <td>{{facility.courts}}</td>
+                    <td>{{facility.lights}}</td>
+                    <td>{{facility.courtTypes}}</td>
+                    <td>{{facility.description}}</td>
+                    <td>{{facility.phone}}</td>
+                    <td><a href="Reservations" ng-click="makeReservation(facility)">Reservations</a></td>
+                    <td><a href="Map" ng-click="showMap(facility)">Map</a></td>
+                    <td><a href="Edit" ng-click="edit(facility)">Edit</a></td>
+                    <td><a href="Delete" ng-click="delete(facility)">Delete</a></td>
+            </tbody>
+        </table>
+    </div>
+
+
+</div>
